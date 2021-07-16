@@ -152,7 +152,7 @@ class AdminConfirmMixin:
 
         def _display_for_changed_data(field, initial_value, new_value):
             if not (isinstance(field, FileField) or isinstance(field, ImageField)):
-                return [initial_value, new_value]
+                return [field, initial_value, new_value]
 
             if initial_value:
                 if new_value is False:
@@ -179,7 +179,7 @@ class AdminConfirmMixin:
                 if new_value is not None and new_value != default_value:
                     # Show what the default value is
                     changed_data[name] = _display_for_changed_data(
-                        field_object, default_value, new_value
+                        field_object.verbose_name.title(), default_value, new_value
                     )
         else:
             # Parse the changed data - Note that using form.changed_data would not work because initial is not set
