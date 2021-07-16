@@ -198,7 +198,7 @@ class AdminConfirmMixin:
 
                 if initial_value != new_value:
                     changed_data[name] = _display_for_changed_data(
-                        field_object, initial_value, new_value
+                        field_object.verbose_name.title(), initial_value, new_value
                     )
 
         return changed_data
