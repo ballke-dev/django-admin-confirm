@@ -428,6 +428,7 @@ class AdminConfirmMixin:
             "model_name": opts.model_name,
             "opts": opts,
             "changed_data": changed_data,
+            "obj": obj,
             "add": add,
             "save_as_new": SAVE_AS_NEW in request.POST,
             "submit_name": save_action,
