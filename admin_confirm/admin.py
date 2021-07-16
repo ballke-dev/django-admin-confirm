@@ -176,7 +176,7 @@ class AdminConfirmMixin:
                 # Don't consider default values as changed for adding
                 field_object = model._meta.get_field(name)
                 default_value = field_object.get_default()
-                if new_value is not None and new_value != default_value:
+                if new_value is not None and new_value != default_value and default_value is not None and default_value != "":
                     # Show what the default value is
                     changed_data[name] = _display_for_changed_data(
                         field_object.verbose_name.title(), default_value, new_value
