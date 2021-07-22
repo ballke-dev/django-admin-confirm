@@ -416,7 +416,7 @@ class AdminConfirmMixin:
             cleared_fields = self._get_cleared_fields(request)
 
         log("Render Change Confirmation")
-        title_action = _("adding") if add_or_new else _("changing")
+        "title": f"{_('Confirme')} {title_action} em {opts.verbose_name}",
         context = {
             **self.admin_site.each_context(request),
             "preserved_filters": self.get_preserved_filters(request),
@@ -426,6 +426,7 @@ class AdminConfirmMixin:
             "object_id": object_id,
             "app_label": opts.app_label,
             "model_name": opts.model_name,
+            "model_verbose": opts.verbose_name,
             "opts": opts,
             "changed_data": changed_data,
             "obj": obj,
