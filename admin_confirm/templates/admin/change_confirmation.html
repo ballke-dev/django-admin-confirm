@@ -53,9 +53,9 @@
         {% if to_field %}<input type="hidden" name="{{ to_field_var }}" value="{{ to_field }}">{% endif %}
         {% if form.is_multipart %}<input type="hidden" name="_confirmation_received" value="True">{% endif %}
         <div class="submit-row">
-            <input type="submit" value="{% trans 'Yes, I’m sure' %}" name="{{ submit_name }}">
+            <input type="submit" value="{% trans 'Sim, tenho certeza' %}" name="{{ submit_name }}">
             <p class="deletelink-box">
-                <a href="#" class="button cancel-link">{% trans "No, continue to edit" %}</a>
+                <a href="#" class="button cancel-link">{% trans "Nâo, quero editar" %}</a>
             </p>
         </div>
     </form>

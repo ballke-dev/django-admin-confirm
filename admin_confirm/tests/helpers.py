@@ -44,7 +44,7 @@ class AdminConfirmTestCase(TestCase):
     ):
         # Submit should conserve the save action
         self.assertIn(
-            f'<input type="submit" value="Yes, I’m sure" name="{save_action}">',
+            f'<input type="submit" value="Sim, tenho certeza" name="{save_action}">',
             rendered_content,
         )
         # There should not be _confirm_add or _confirm_change sent in the form on confirmaiton page
