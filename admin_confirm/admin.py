@@ -416,7 +416,7 @@ class AdminConfirmMixin:
             cleared_fields = self._get_cleared_fields(request)
 
         log("Render Change Confirmation")
-        title_action = _("adding") if add_or_new else _("changing")
+        title_action = _("adição") if add_or_new else _("alteração")
         context = {
             **self.admin_site.each_context(request),
             "preserved_filters": self.get_preserved_filters(request),
