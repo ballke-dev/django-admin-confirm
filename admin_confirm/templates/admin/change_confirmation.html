@@ -34,7 +34,7 @@
     {% if add or save_as_new %}
         <p>{% blocktrans with escaped_object=object %}Você tem certeza que quer salvar o {{ model_name }}?{% endblocktrans %}</p>
     {% else %}
-        <p>{% blocktrans with escaped_object=object %}Voce tem, certeza que quer alterar o {{ model_name }} "{{ object_name }}"?{% endblocktrans %}</p>
+        <p>{% blocktrans with escaped_object=object %}Voce tem certeza que quer alterar o {{ model_name }} "{{ object_name }}"?{% endblocktrans %}</p>
     {% endif %}
 
     {% include "admin/change_data.html" %}
